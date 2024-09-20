@@ -1,0 +1,26 @@
+CREATE TABLE eventos (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description_short TEXT,
+    description_large TEXT,
+    date TIMESTAMP,
+    organizer VARCHAR(255),
+    place VARCHAR(255),
+    state VARCHAR(50)
+);
+
+
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL
+);
+
+
+CREATE TABLE suscripciones (
+    evento_id INT REFERENCES eventos(id),
+    usuario_id INT REFERENCES usuarios(id),
+    PRIMARY KEY (evento_id, usuario_id)
+);
+
+
+

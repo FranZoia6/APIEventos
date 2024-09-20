@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>Consulta de Eventos</title>
+</head>
+<body>
+
+<h1>Consultar Eventos</h1>
+
+
+<section>
+    <h2>Consultar Evento por ID</h2>
+    <form id="consulta-evento-form">
+        <label for="evento-id">ID del Evento:</label>
+        <input type="number" id="evento-id" name="evento-id" required>
+        <button type="submit">Consultar Evento</button>
+    </form>
+    <div id="resultado-evento">
+        <h3>Resultado del Evento:</h3>
+        <pre id="respuesta-evento"></pre>
+    </div>
+</section>
+
+
+<section>
+    <h2>Consultar Todos los Eventos</h2>
+    <form id="consulta-todos-eventos-form">
+        <button type="submit">Consultar Todos los Eventos</button>
+    </form>
+    <div id="resultado-todos-eventos">
+        <h3>Resultado de Todos los Eventos:</h3>
+        <pre id="respuesta-todos-eventos"></pre>
+    </div>
+</section>
+
+<section>
+    <h2>Login admin</h2>
+    <form id="login-form">
+        <label for="admin">Admin</label>
+        <input type="text" id="adminname" name="adminname" required>
+        <label for="assword">Password</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+    <div id="resultado-token">
+        <h3>Token Resultado:</h3>
+        <pre id="respuesta-token"></pre>
+    </div>
+</section>
+
+<section>
+    <h2>Crear Evento</h2>
+    <form id="crear-evento-form">
+        <label for="evento">Evento JSON</label>
+        <textarea id="addEvent" name="addEvent" required></textarea>
+        <label for="token">Token</label>
+        <input type="text" id="token" name="token" required>
+        <button type="submit">Crear</button>
+    </form>
+    <div id="resultado-crear-evento">
+        <h3>Token Resultado:</h3>
+        <pre id="respuesta-crear-evento"></pre>
+    </div>
+</section>
+
+<section>
+    <h2>Crear Usuario</h2>
+    <form id="crear-usuario-form">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Crear</button>
+    </form>
+    <div id="resultado-crear-usuario">
+        <h3>Token Resultado:</h3>
+        <pre id="respuesta-crear-usuario"></pre>
+    </div>
+</section>
+
+<section>
+    <h2>Suscribir a un Evento</h2>
+    <form id="suscribir-evento-form">
+        <label for="evento-id">ID del Evento</label>
+        <input type="number" id="EventoID" name="EventoID" required>
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email-suscribir" name="email-suscribir" required>
+        <button type="submit">Suscribir</button>
+    </form>
+    <div id="resultado-suscribir-evento">
+        <h3>Resultado:</h3>
+        <pre id="respuesta-suscribir-evento"></pre>
+    </div>
+</section>
+
+
+<section>
+    <h2>Actualizar Evento</h2>
+    <form id="update-evento-form">
+        <label for="evento-id">ID del Evento:</label>
+        <input type="number" id="evento-id-update" name="evento-id" required>
+        <label for="title">Título del Evento:</label>
+        <input type="text" id="title" name="title">
+        <label for="description">Descripción Corta:</label>
+        <input type="text" id="description" name="description">
+        <label for="description-large">Descripción Larga:</label>
+        <textarea id="description-large" name="description-large"></textarea>
+        <label for="date">Fecha (YYYY-MM-DD HH:MM):</label>
+        <input type="text" id="date" name="date">
+        <label for="organizer">Organizador:</label>
+        <input type="text" id="organizer" name="organizer">
+        <label for="place">Lugar:</label>
+        <input type="text" id="place" name="place">
+        <label for="state">Estado:</label>
+        <input type="text" id="state" name="state">
+        <label for="token">Token de Autorización:</label>
+        <input type="text" id="token-update" name="token-update" required>
+        <button type="submit">Actualizar</button>
+    </form>
+    <div id="resultado-actualizar-evento">
+        <h3>Resultado de la Actualización:</h3>
+        <pre id="respuesta-actualizar-evento"></pre>
+    </div>
+</section>
+
+
+<script src="./script.js"></script>
+
+</body>
+</html>
